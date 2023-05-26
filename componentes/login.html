@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #353356;
+    }
+        div#head {
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+        }
+        p {
+            color: white;
+        }
+        a{
+            text-decoration: none;
+        }
+        img {
+            width: 100%;
+            height: 650px;
+        }
+        form{
+            display: grid;
+            justify-content: center;
+            margin: 200px;
+        }
+        input{
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        #btn-sub {
+            margin-left: 20px;
+        }
+        .form-in {
+            width: 300px;
+            background-color: #f4f0f0;
+            padding: 20px;
+            margin-left: 570px;
+            border-radius: 30px;
+            box-shadow: 12px 12px 12px 12px rgba(240, 240, 244, 0.2);
+        }
+    </style>
+    <div id="head">
+        <a href=""><p>home</p></a>
+        <a href="../componentes/New folder/product.html"><p>product</p></a>
+        <a href="../componentes/New folder/cart.html"><p>cart</p></a>
+        <a href="../componentes/login.html"><p>login </p></a>
+        <a href="../componentes/New folder/singup.html"><p>sing up</p></a>
+    </div>
+    <form class="form-in">
+        <input type="text" id="name" placeholder="name">
+        <input type="email" id="email" placeholder="email">
+        <input type="password" id="password" placeholder="password">
+        <input type="password" id="cpassword" placeholder="conform password">
+        <input type="submit" value="login" id="btn-sub">
+    </form>
+</body>
+<script>
+    document.querySelector("form").addEventListener("submit", function (e){
+        e.preventDefault();
+
+        let logindata={
+            name:document.getElementById("name").value,
+            email:document.getElementById("email").value,
+            password:document.getElementById("password").value,
+            password:document.getElementById("cpassword").value
+        }
+        console.log(logindata);
+    });
+</script>
+</html>
