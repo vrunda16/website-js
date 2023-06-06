@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
 }
-div#head {
+div#nav {
     display: flex;
     justify-content: space-around;
     background-color: black;
